@@ -1,6 +1,6 @@
 body{
     background-color: #E0E8FF;
-    background-image: url(order-summary-component-main/images/pattern-background-desktop.svg);
+    background-image: url(images/pattern-background-desktop.svg);
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -17,7 +17,7 @@ body{
 
 @media (max-width: 700px){
    body{
-       background-image: url(order-summary-component-main/images/pattern-background-mobile.svg);
+       background-image: url(images/pattern-background-mobile.svg);
    }
 }
 
