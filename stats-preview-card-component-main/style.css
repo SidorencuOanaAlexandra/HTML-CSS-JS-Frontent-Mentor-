@@ -1,0 +1,128 @@
+body{
+    background-color:hsl(233, 47%, 7%);
+    display: grid;
+    place-items: center;
+}
+
+.common-text{
+    color: white;
+    text-align: left;
+}
+.bold-text{
+    font-family: 'Inter', sans-serif;
+}
+.normal-text{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.main-page{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 100px;
+    background-color: hsl(244, 38%, 16%);
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 90px;
+}
+
+.title{
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.description{
+    line-height: 30px;
+}
+
+.statistics{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.number{
+    font-size: 25px;
+}
+
+.object{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#purple-word{
+    color: hsl(277, 64%, 61%);
+}
+.image{
+    background-color: #5b0d86;
+    width: 50%;
+}
+img{
+    height: 100%;
+    mix-blend-mode: screen;
+    filter: grayscale(110%) contrast(150%) brightness(60%);
+    opacity: 1;
+}
+
+@media (max-width: 500px){
+    .common-text{
+        color: white;
+        text-align: center;
+    }
+    .main-page{
+        flex-direction: column-reverse;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .image, img{
+        height: 300px;
+        width: 100%;
+    }
+
+    .title{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .description{
+        font-size: 14px;
+    }
+    .details{
+        padding: 40px 40px;
+    }
+    .number{
+        font-size: 20px;
+    }
+
+    .object{
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+
+    .statistics{
+        flex-direction: column;
+    }
+    .description{
+        margin: 20px 0;
+    }
+    .item{
+        margin: 20px;
+    }
+
+
+}
