@@ -19,11 +19,16 @@ body{
     width: 80%;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     border-radius: 20px;
     overflow: hidden;
     margin-top: 100px;
     background-color: hsl(244, 38%, 16%);
+}
+
+.main-page > *{
+    flex: 1 1 400px;
 }
 
 .details{
@@ -71,10 +76,11 @@ body{
 }
 .image{
     background-color: #5b0d86;
-    width: 50%;
+    /*width: 50%;*/
 }
 img{
     height: 100%;
+    width: 100%;
     mix-blend-mode: screen;
     filter: grayscale(110%) contrast(150%) brightness(60%);
     opacity: 1;
@@ -91,8 +97,12 @@ img{
         margin-bottom: 50px;
     }
     .image, img{
-        height: 300px;
+        height: 200px;
         width: 100%;
+    }
+
+    .main-page > *{
+        flex: 0 1 200px;
     }
 
     .title{
