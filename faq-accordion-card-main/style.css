@@ -1,0 +1,191 @@
+
+body{
+    background-image: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    /*width: 70%;*/
+    width: 1050px;
+    margin-top: 65px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 65px;
+    border-radius: 30px;
+    box-shadow:0 4px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+.imageSection{
+    overflow: hidden;
+    position: relative;
+}
+
+.behind-image{
+    position: absolute;
+    height: 200%;
+    top: -390px;
+    left: -800px;
+
+}
+
+.main-image{
+    position: absolute;
+    height: 69%;
+    left: -105px;
+    top: 80px;
+}
+
+.cube{
+    overflow: visible;
+    position: absolute;
+    height: 230px;
+    width: 230px;
+    top: 210px;
+    /*left: 100px;*/
+    left: -13%;
+
+}
+
+.faq{
+    padding: 30px 80px 30px 50px;
+    height: 550px;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*flex-direction: column;*/
+
+}
+
+.question{
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 20px;
+    color: hsl(240, 6%, 50%);
+}
+
+.icon{
+    width: 35px;
+    height: 35px;
+    /*background: url("images/icon-arrow-down.svg") no-repeat center;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icon img{
+    width: 15px;
+    height: 10px;
+    margin: 0 auto;
+}
+
+.answer{
+    overflow: hidden;
+    max-height: 0;
+    transition: all .5s ease-in;
+    color: hsl(240, 6%, 50%);
+}
+
+main > *{
+    flex: 1 1 300px;
+}
+
+@media (max-width: 1205px){
+    main{
+        width: 80%;
+
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        border-radius: 30px;
+        box-shadow:0 4px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: white;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+
+    .imageSection{
+        overflow: hidden;
+        position: relative;
+    }
+
+    .behind-image{
+        position: absolute;
+        height: 200%;
+        top: -390px;
+        left: -800px;
+
+    }
+
+    .main-image{
+        position: absolute;
+        height: 69%;
+        left: -105px;
+        top: 80px;
+    }
+
+    .cube{
+        overflow: visible;
+        position: absolute;
+        height: 230px;
+        width: 230px;
+        top: 210px;
+        /*left: 100px;*/
+        left: -13%;
+
+    }
+
+    .faq{
+        padding: 30px 80px 30px 50px;
+        height: 550px;
+        /*display: flex;*/
+        /*justify-content: center;*/
+        /*flex-direction: column;*/
+
+    }
+
+    .question{
+        border-bottom: 1px solid hsl(240, 5%, 91%);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        cursor: pointer;
+        font-size: 20px;
+        color: hsl(240, 6%, 50%);
+    }
+
+    .icon{
+        width: 35px;
+        height: 35px;
+        /*background: url("images/icon-arrow-down.svg") no-repeat center;*/
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .icon img{
+        width: 15px;
+        height: 10px;
+        margin: 0 auto;
+    }
+
+    .answer{
+        overflow: hidden;
+        max-height: 0;
+        transition: all .5s ease-in;
+        color: hsl(240, 6%, 50%);
+    }
+
+    main > *{
+        flex: 1 1 300px;
+    }
+
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"></head>
+<body>
+
+  <main>
+    <div class="imageSection">
+      <img class="behind-image" src="images/bg-pattern-desktop.svg">
+      <img class="main-image" src="images/illustration-woman-online-desktop.svg">
+    </div>
+<!--    <img class="cube" src="images/illustration-box-desktop.svg">-->
+<!--    <img class="cube" src="images/illustration-box-desktop.svg">-->
+    <div class="faq">
+      <h1 class="title">FAQ</h1>
+      <div class="question">
+        <h5 >How many team members can I invite?</h5>
+        <div class="icon">
+          <img src="images/icon-arrow-down.svg">
+        </div>
+      </div>
+      <div class="answer">
+          <p>
+              You can invite up to 2 additional users on the Free plan. There is no limit on
+              team members for the Premium plan.
+          </p>
+      </div>
+      <img class="cube" src="images/illustration-box-desktop.svg">
+      <div class="question">
+
+        <h5 >What is the maximum file upload size?</h5>
+        <div class="icon">
+            <img src="images/icon-arrow-down.svg">
+        </div>
+      </div>
+      <div class="answer">
+        <p>
+          No more than 2GB. All files in your account must fit your allotted storage space.
+        </p>
+      </div>
+      <div class="question">
+        <h5 >How do I reset my password?</h5>
+        <div class="icon">
+            <img src="images/icon-arrow-down.svg">
+        </div>
+      </div>
+      <div class="answer">
+        <p>
+            Click “Forgot password” from the login page or “Change password” from your profile page.
+            A reset link will be emailed to you.
+        </p>
+      </div>
+      <div class="question">
+        <h5 >Can I cancel my subscription?</h5>
+        <div class="icon">
+            <img src="images/icon-arrow-down.svg">
+        </div>
+      </div>
+      <div class="answer">
+        <p>
+          Yes! Send us a message and we’ll process your request no questions asked.
+        </p>
+      </div>
+      <div class="question">
+        <h5 >Do you provide additional support?</h5>
+        <div class="icon">
+            <img src="images/icon-arrow-down.svg">
+        </div>
+      </div>
+      <div class="answer">
+        <p>
+          Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        </p>
+      </div>
+    </div>
+  </main>
+
+
+<script>
+  var acc = document.getElementsByClassName("question");
+  for (var i=0;i<acc.length;i++){
+    let j = i;
+    acc[i].addEventListener('click',function (){
+      //this.classList.toggle('active');
+      var answer = this.nextElementSibling;
+      if(answer.style.maxHeight){
+        answer.style.maxHeight = null;
+        acc[j].style.color = 'hsl(240, 6%, 50%)';
+        acc[j].children[1].children[0].style.transform = 'scaleY(1)';
+      }else{
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        acc[j].style.color = 'black';
+        acc[j].children[1].children[0].style.transform = 'scaleY(-1)';
+      }
+      for(var l=0;l<acc.length;l++){
+        if(l!==j){
+          if( acc[l].nextElementSibling.style.maxHeight != null){
+              acc[l].children[1].children[0].style.transform = 'scaleY(1)';
+          }else{
+             // acc[j].children[1].children[0].style.transform = 'scaleY(-1)';
+          }
+          acc[l].nextElementSibling.style.maxHeight = null;
+          acc[l].style.color = 'hsl(240, 6%, 50%)';
+        }
+      }
+    });
+  }
+
+</script>
+</body>
+</html>
